@@ -1,0 +1,83 @@
+@import 'universals';
+@import 'variables';
+@import 'mixings';
+
+.header{
+    &__nav{
+        display: flex;
+        justify-content: space-between;
+        h1{
+            color: $color-titulo;
+            font-size: 30px;
+            font-weight: bold
+        }
+    }
+}
+
+.button{
+    @include buttons();
+    &--nav{
+        background-color: $color-primary;
+        color: #fff;
+        &:hover{
+            border: 1px solid $color-primary;
+            color: $color-primary;
+        }
+    }
+    &--success{
+        background-color: $color-titulo;
+        color: #fff;
+        font-size: 20px;
+        &:hover{
+            border: 1px solid  $color-success;
+            color:  $color-success;
+        }
+    }
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+
+    &__label{
+        font-size: 18px;
+        color: $color-titulo;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    &__input{
+        padding: 5px 10px;
+        border-radius: 5px;
+        outline: none;
+        border: 1px solid $color-primary;
+        width: 50%;
+        height: 30px;
+        text-align: center;
+    }
+    &__select{
+        height: 30px;
+        margin-bottom: 10px;
+    }
+}
+
+table{
+    border-radius: 15px;
+    border: 1px solid $color-primary;
+    width: 40%;
+    height: 250px;
+    margin-left: 30%;
+    margin-top: 40px;
+    background-color: rgb(234, 245, 242);
+    
+    th {
+        @include th
+    }
+    td {
+        @include td
+    }
+}
+

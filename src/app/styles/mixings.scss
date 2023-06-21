@@ -1,0 +1,24 @@
+
+@mixin buttons (){
+ border: none;
+ padding: 5px 10px;
+ border-radius: 5px;
+ &:hover{
+    background-color: transparent;
+    cursor: pointer;
+ }
+//  background-color: $back-color;
+//  color: $color-font;
+}
+@mixin th () {
+   color: $color-th;
+   font-size: 21px;
+   text-align: center;
+   margin-left: 5px;
+}
+@mixin td () {
+   color: $color-titulo;
+   margin-left: 5px;
+   border: 1px solid $color-primary;
+   text-align: center;
+}
